@@ -1,0 +1,12 @@
+.form-control {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 0%;
+  margin: 0%;
+}
+
+.form-control>button {
+  display: flex;
+  flex-direction: row;
+}

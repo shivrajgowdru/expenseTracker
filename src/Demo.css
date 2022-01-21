@@ -1,0 +1,8 @@
+* {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.tracker>h2 {
+  margin-inline-start: 33%;
+}
