@@ -1,10 +1,27 @@
 import React from 'react'
 import './Output.css'
-function Output(props) {
-  return (
-    <div className="output">
-      {props.total}
-    </div>
+
+function Output({transaction}){
+
+return (
+  <div className="output">
+   <h1>Transaction:</h1>
+        <div className='transout'> {
+           transaction.map(transaction => {
+             return <>
+             <div>
+               {transaction.date}
+               &nbsp;-&nbsp;
+               {transaction.amount} 
+                &nbsp;-&nbsp;
+               {transaction.type}
+            </div>
+                   </>
+           })
+         }
+         </div>
+        
+  </div>
   )
 }
 

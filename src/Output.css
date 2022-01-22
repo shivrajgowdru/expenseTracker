@@ -1,4 +1,26 @@
 .output {
   display: flex;
+  flex-direction: column;
   border: 1px solid black
+}
+
+.output>h1 {
+
+  margin-left: 2%;
+}
+
+.transout {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0%;
+  margin-left: 5%;
+
+}
+
+.transout>div {
+  margin-left: 2%;
+
+  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0%;
 }

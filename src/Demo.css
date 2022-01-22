@@ -1,8 +1,18 @@
 * {
   max-width: 800px;
   margin: 40px auto;
+
 }
 
-.tracker>h2 {
-  margin-inline-start: 33%;
+.tracker {
+  border: 1px solid black;
+  padding: 30px;
+}
+
+.title {
+  text-align: center;
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+  width: 100%;
 }

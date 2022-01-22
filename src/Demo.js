@@ -7,43 +7,32 @@ import { useEffect, useState } from 'react'
 const Demo = (props) => {
 
 const [transaction,setTransaction] = useState([])
-const [balance,setBalance] = useState(0)
-const [total,setTotal] = useState([transaction])
+const [balance,setBalance] = useState('')
 
-const addTransaction = (payload) => {
+
+  const addTransaction = (payload) => {
   const transactionArray = [...transaction];
   transactionArray.push(payload);
   setTransaction(transactionArray)
-}
- 
-const calBalance = () => {
-  let bal=0;
-  transaction.map((payload) => {
-   return (payload.type==='add'? bal=bal+payload.amount : bal=bal-payload.amount)
-  })
-  setBalance(bal)
-}
+  }
 
-const disTotal = () => {
- transaction.map((payload) => {
-   return(
-     console.log(payload),
-     console.log(balance)
-   )
- })
-}
-console.log(total)
-useEffect(()=>{
-  calBalance()
-  disTotal()
-},[transaction])
-
+      const calBalance = () => 
+      {
+      let bal=0;
+      transaction.map((payload) => {
+      return (payload.type==='add'? bal=payload.amount + bal : bal=bal - payload.amount)
+                                   })
+              setBalance(bal)
+      }
+   useEffect(()=>{
+     calBalance()
+  },[transaction])
 
   return (
     <div className="tracker">
-    <h2>Expense Tracker - Basic</h2>
+    <p className='title'>Expense Tracker - Basic</p>
       <Counter addTransaction={addTransaction} balance={balance}/>
-      <Output total={total}/>
+      <Output  transaction={transaction}/>
     </div>
   )
 }
